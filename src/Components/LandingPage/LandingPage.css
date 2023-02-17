@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600&display=swap');
+
+.LandingPage-page{
+    position: fixed;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+.LandingPage-button{
+  margin: auto;
+  border-radius: 60px;
+  background-color: #445851;
+  color: white;
+  box-shadow: 0 0 10px -1px black;
+  display: grid;
+  height: 60px;
+  width: auto;
+  padding: 0 30px;
+}
+
+.LandingPage-button:hover{
+  cursor: pointer;
+  background-color: #394641;
+}
+
+.LandingPage-button:active{
+  scale: .95;
+}
+
+.LandingPage-button-text{
+  font-size: 25px;
+  margin: auto;
+}

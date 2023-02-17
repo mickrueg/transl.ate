@@ -1,0 +1,34 @@
+.Background{
+    position: fixed;
+    height: 100%;
+    width: 100%; 
+}
+
+.background-image{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-image: url('../../../public/assets/trees-gb87382bdd_1920.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 500ms ease;
+}
+
+.background-overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: .45;
+    box-shadow: inset 0 0 300px black;
+    transition: opacity 1.5s ease-out;
+  }
+  
+  
+  .background-overlay.hidden{
+    opacity: .25;
+    opacity: 0;
+    /* transition: opacity 3s ease-in; */
+  }
+  
