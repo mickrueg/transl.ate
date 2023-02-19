@@ -9,6 +9,11 @@ const LandingPage = () => {
         setTitlePosition,
         setOverlay
     } = useContext(AppContext);
+
+
+    setTitlePosition('center');
+    setOverlay('')
+
     const navigate = useNavigate();
 
     return (

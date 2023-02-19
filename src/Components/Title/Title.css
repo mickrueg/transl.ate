@@ -8,7 +8,7 @@
 .Title{
     position: fixed;
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.56);
+    text-shadow: 0 0 1px white;
     color: white;
     transition: all 1.5s ease-in-out;
     font-size: 35px;
