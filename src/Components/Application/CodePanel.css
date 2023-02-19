@@ -1,0 +1,7 @@
+.CodePanel-shape{
+    width: 375px;
+    height: 100%;
+    background-color: #445851;
+    box-shadow: 0 0 5px -2px black;
+    border-radius: 20px;
+}

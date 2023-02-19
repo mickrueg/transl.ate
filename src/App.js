@@ -12,12 +12,16 @@ function App() {
 
   const [overlay, setOverlay] = useState("");
   const [titlePosition, setTitlePosition] = useState("center");
+  const [fromLanguage,setFromLanguage] = useState("JavaScript");
+  const [toLanguage,setToLanguage] = useState("Python");
 
   return (
     <div className="App">
       <AppContext.Provider value={{
         overlay,setOverlay,
-        titlePosition,setTitlePosition
+        titlePosition,setTitlePosition,
+        fromLanguage,setFromLanguage,
+        toLanguage,setToLanguage
       }}>
         <Background overlay={overlay}/>
         <Routes>
