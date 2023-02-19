@@ -1,7 +1,56 @@
 .CodePanel-shape{
     width: 375px;
-    height: 100%;
-    background-color: #445851;
+    height: 470px;
+    /* border: solid white; */
+    background-color: #3B3B3B;
     box-shadow: 0 0 5px -2px black;
-    border-radius: 20px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.CodePanel-shape.fromLayout {
+    grid-template-rows: 20px 1fr 70px;
+}
+
+.CodePanel-shape.toLayout{
+    background-color: #445851;
+    grid-template-rows: 20px 1fr 20px;
+}
+
+.CodePanel-shape textarea{
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 335px;
+    height: 370px;
+    resize: none;
+    font-size: 18px;
+    outline: none;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+
+
+.CodePanel-shape ::-webkit-scrollbar {
+    padding-left: 10px;
+    width: 10px;
+    cursor: pointer;
+}
+
+.CodePanel-shape ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.CodePanel-shape ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #939393;
+}
+
+.CodePanel-shape ::-webkit-scrollbar-thumb:hover {
+    background: #686868;
 }

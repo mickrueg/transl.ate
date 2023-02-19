@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../../AppContext';
 import './Application.css';
-import CodePanel from './CodePanel.tsx';
+import CodePanel from './CodePanel.js';
 import LanguageButton from './LanguageButton.js';
 
 const Application = () => {
@@ -15,9 +15,9 @@ const Application = () => {
 
     const [slide, setSlide] = useState("down");
 
-    setTitlePosition('top-left');
-    setOverlay('hidden');
     setTimeout(() => {
+        setTitlePosition('top-left');
+        setOverlay('hidden');
         setSlide('up');
     }, 0);
 
@@ -33,7 +33,7 @@ const Application = () => {
                 </div>
                 <div className='Code-bar'>
                     <CodePanel />
-                    <CodePanel />
+                    <CodePanel type="toText" layout="toLayout"/>
                 </div>
             </div>
         </div>
