@@ -17,7 +17,7 @@ function App() {
   const [fromLanguage,setFromLanguage] = useState("JavaScript");
   const [fromInput,setFromInput] = useState("");
   const [toLanguage,setToLanguage] = useState("Python");
-  const [toInput,setToInput] = useState("");
+  const [toInput,setToInput] = useState("Type code to the left and click submit to see translated code here :)");
 
   return (
     <div className="App">
