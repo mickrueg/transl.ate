@@ -1,0 +1,73 @@
+.LanguageButton-shape{
+    background-color: #445851;
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    margin: auto;
+    box-shadow: 0 0 5px -2px black;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    color: white;
+    font-size: 25px;
+}
+
+.LanguageButton-shape:hover{
+    cursor: pointer;
+    background-color: #394641;
+}
+
+.LanguageButton-shape:active{
+    scale: .95;
+}
+
+.LanguageButton-language{
+    margin: auto 25px;
+    z-index: 1;
+    /* border: solid white; */
+}
+
+.LanguageButton-triangle{
+    fill: white;
+    height: 35px;
+    margin: auto;
+    /* border: solid white; */
+}
+
+.DropDown{
+    position: absolute;
+    width: 250px;
+    background-color: #445851;
+    margin: 0;
+    border-radius: 25px;
+    box-shadow: 0 0 8px -1px black;
+    display: grid;
+    grid-template-rows: 42px 1fr;
+    grid-template-columns: auto 45px;
+}
+
+.DropDown.ddClose{
+    display: none;
+}
+
+.DropDown-list{
+    grid-row: 2;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.DropDown-item{
+    margin: 8px 25px;
+}
+
+.DropDown-item:hover{
+    text-shadow: 0 0 5px white;
+}
+
+.Escape-Options{
+    fill: white;
+    position: absolute;
+    grid-column: 2;
+    margin-top: 10px;
+    z-index: 0;
+}

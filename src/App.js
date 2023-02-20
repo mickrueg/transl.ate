@@ -16,8 +16,10 @@ function App() {
   const [titlePosition, setTitlePosition] = useState("center");
   const [fromLanguage,setFromLanguage] = useState("JavaScript");
   const [fromInput,setFromInput] = useState("");
+  const [fromOpen,setFromOpen] = useState(false)
   const [toLanguage,setToLanguage] = useState("Python");
   const [toInput,setToInput] = useState("Type code to the left and click submit to see translated code here :)");
+  const [toOpen,setToOpen] = useState(false)
 
   return (
     <div className="App">
@@ -27,7 +29,9 @@ function App() {
         fromLanguage,setFromLanguage,
         toLanguage,setToLanguage,
         fromInput,setFromInput,
-        toInput,setToInput
+        toInput,setToInput,
+        fromOpen,setFromOpen,
+        toOpen,setToOpen
       }}>
         <Background overlay={overlay}/>
         <Routes>
