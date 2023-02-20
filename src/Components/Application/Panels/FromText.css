@@ -23,6 +23,6 @@
 }
 
 .fromTextSubmit:focus{
-    outline: auto;
+    box-shadow: 0 0 5px 1px white;
 
 }

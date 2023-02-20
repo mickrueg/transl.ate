@@ -14,10 +14,10 @@ function App() {
 
   const [overlay, setOverlay] = useState("");
   const [titlePosition, setTitlePosition] = useState("center");
-  const [fromLanguage,setFromLanguage] = useState("JavaScript");
+  const [fromLanguage,setFromLanguage] = useState("English");
   const [fromInput,setFromInput] = useState("");
   const [fromOpen,setFromOpen] = useState(false)
-  const [toLanguage,setToLanguage] = useState("Python");
+  const [toLanguage,setToLanguage] = useState("JavaScript");
   const [toInput,setToInput] = useState("Type code to the left and click submit to see translated code here :)");
   const [toOpen,setToOpen] = useState(false)
 
@@ -37,7 +37,6 @@ function App() {
         <Routes>
           <Route path="/*" element={<LandingPage />} />
           <Route path="/app" element={<Application />} />
-          
         </Routes>
         <Title position={titlePosition}/>
       </AppContext.Provider>

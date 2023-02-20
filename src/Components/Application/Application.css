@@ -31,7 +31,12 @@
     width: 700px;
     padding: 0 50px;
     display: flex;
-    grid-template-columns: 62px auto 24px auto 24px auto 24px auto 24px auto 62px;
+}
+
+.Language-swap{
+    width: 128px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .Medium-circle{
@@ -48,6 +53,10 @@
     border-radius: 50px;
     margin: 35px auto;
 }
+
+/* .Language-swap:hover{
+    width: 30px;
+} */
 
 .Code-bar{
     width: 100%;
