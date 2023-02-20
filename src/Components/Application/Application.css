@@ -31,6 +31,7 @@
     width: 700px;
     padding: 0 50px;
     display: flex;
+    grid-template-columns: 62px auto 24px auto 24px auto 24px auto 24px auto 62px;
 }
 
 .Medium-circle{

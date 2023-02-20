@@ -1,35 +1,42 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../../AppContext';
 import './Application.css';
-import CodePanel from './CodePanel.js';
-import LanguageButton from './LanguageButton.js';
+import CodePanel from './Panels/CodePanel';
+import LanguageButton from './Top Bar/LanguageButton.js';
 
 const Application = () => {
 
+    
     const {
         fromLanguage,setFromLanguage,
         toLanguage,setToLanguage,
         setTitlePosition,
-        setOverlay
+        setOverlay,
+        fromOpen,
+        toOpen
     } = useContext(AppContext);
-
+    
     const [slide, setSlide] = useState("down");
-
+    
     setTimeout(() => {
         setTitlePosition('top-left');
         setOverlay('hidden');
         setSlide('up');
     }, 0);
 
+    const languages = ["English","Java","JavaScript","Python"];
+    const fromOptions = languages.filter((e)=>e!==fromLanguage)
+    const toOptions = languages.filter((e)=>e!==toLanguage)
+
     return (
         <div className={`App-page ${slide}`}>
             <div className='App-center'>
                 <div className='Button-bar'>
-                    <LanguageButton language={fromLanguage}/>
+                    <LanguageButton language={fromLanguage} options={fromOptions} from open={fromOpen}/>
                     <div className="Medium-circle"></div>
                     <div className="Little-circle"></div>
                     <div className="Medium-circle"></div>
-                    <LanguageButton language={toLanguage}/>
+                    <LanguageButton language={toLanguage} options={toOptions} open={toOpen}/>
                 </div>
                 <div className='Code-bar'>
                     <CodePanel />
