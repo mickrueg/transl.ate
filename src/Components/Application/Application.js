@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../../AppContext';
 import './Application.css';
 import CodePanel from './Panels/CodePanel';
-import LanguageButton from './Top Bar/LanguageButton.js';
+import LanguageButton from './LanguageButton/LanguageButton.js';
 
 const Application = () => {
 
@@ -33,9 +33,11 @@ const Application = () => {
             <div className='App-center'>
                 <div className='Button-bar'>
                     <LanguageButton language={fromLanguage} options={fromOptions} from open={fromOpen}/>
-                    <div className="Medium-circle"></div>
-                    <div className="Little-circle"></div>
-                    <div className="Medium-circle"></div>
+                    <div className='Language-swap'>
+                        <div className="Medium-circle"></div>
+                        <div className="Little-circle"></div>
+                        <div className="Medium-circle"></div>
+                    </div>
                     <LanguageButton language={toLanguage} options={toOptions} open={toOpen}/>
                 </div>
                 <div className='Code-bar'>
