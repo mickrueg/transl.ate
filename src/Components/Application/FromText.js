@@ -49,6 +49,7 @@ const FromText = () => {
         <>
             <textarea id="fromText" name="fromText" placeholder='Type code here...' onChange={(e)=>{setFromInput(e.target.value)}}></textarea>
             <input type="submit" id="fromTextSubmit" name="fromTextSubmit" className='fromTextSubmit' value="submit" onClick={()=>{
+                setToInput("Loading...");
                 console.log(fromInput);
                 translate(fromLanguage,fromInput,toLanguage)
             }}></input>
