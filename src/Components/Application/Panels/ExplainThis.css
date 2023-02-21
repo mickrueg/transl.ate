@@ -1,0 +1,13 @@
+.ExplainThis-shape{
+    width: 100px;
+    height: 40px;
+    background-color: #3B3B3B;
+    border-radius: 20px;
+    display: grid;
+}
+
+.ExplainThis-text{
+    margin: auto;
+    color: white;
+    font-weight: 600;
+}

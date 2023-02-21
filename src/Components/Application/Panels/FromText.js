@@ -49,7 +49,7 @@ const FromText = () => {
 
     return (
         <>
-            <textarea id="fromText" name="fromText" placeholder='Type code here...' onChange={(e)=>{setFromInput(e.target.value)}} onClick={()=>{
+            <textarea id="fromText" name="fromText" placeholder='Type a prompt or your code here...' onChange={(e)=>{setFromInput(e.target.value)}} onClick={()=>{
                 setFromOpen(false);
                 setToOpen(false);
             }}></textarea>
