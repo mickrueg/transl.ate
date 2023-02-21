@@ -43,6 +43,7 @@
 .Language-swap:hover{
     transition: all 1s ease-in-out;
     transform: rotate(180deg);
+    cursor: pointer;
 }
 
 .Language-swap:hover .Medium-circle, .Language-swap:hover .Little-circle{
