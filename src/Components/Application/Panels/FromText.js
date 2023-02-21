@@ -8,7 +8,9 @@ const FromText = () => {
         fromLanguage,
         fromInput,setFromInput,
         toLanguage,
-        setToInput
+        setToInput,
+        setFromOpen,
+        setToOpen
     } = useContext(AppContext);
 
     const translate = (fromLanguageSelected, fromInputSelected, toLanguageSelected) =>{
@@ -47,7 +49,10 @@ const FromText = () => {
 
     return (
         <>
-            <textarea id="fromText" name="fromText" placeholder='Type code here...' onChange={(e)=>{setFromInput(e.target.value)}}></textarea>
+            <textarea id="fromText" name="fromText" placeholder='Type code here...' onChange={(e)=>{setFromInput(e.target.value)}} onClick={()=>{
+                setFromOpen(false);
+                setToOpen(false);
+            }}></textarea>
             <input type="submit" id="fromTextSubmit" name="fromTextSubmit" className='fromTextSubmit' value="submit" onClick={()=>{
                 setToInput("Loading...");
                 console.log(fromInput);
