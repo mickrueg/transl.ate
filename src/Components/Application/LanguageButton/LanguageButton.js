@@ -27,10 +27,12 @@ const LanguageButton = ({language, options=[],from,open=false}) => {
                 setFromOpen(false);
             } else if(from){
                 setFromOpen(true);
+                setToOpen(false);
             } else if(toOpen){
                 setToOpen(false);
             } else {
                 setToOpen(true);
+                setFromOpen(false);
             }
         }}>
             <div className='LanguageButton-language'>

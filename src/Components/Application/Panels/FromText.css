@@ -19,10 +19,11 @@
 }
 
 .fromTextSubmit:active{
-    scale: .95;
+    scale: .99;
 }
 
 .fromTextSubmit:focus{
     box-shadow: 0 0 5px 1px white;
 
 }
+

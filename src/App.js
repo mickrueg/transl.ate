@@ -7,7 +7,6 @@ import Application from './Components/Application/Application.js';
 import { useState } from 'react';
 import Title from './Components/Title/Title.js';
 import { AppContext } from './AppContext';
-// require("dotenv").config()
 
 
 function App() {
