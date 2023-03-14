@@ -17,7 +17,7 @@ function App() {
   const [fromInput,setFromInput] = useState("");
   const [fromOpen,setFromOpen] = useState(false)
   const [toLanguage,setToLanguage] = useState("JavaScript");
-  const [toInput,setToInput] = useState("Type code to the left and click submit to see translated code here :)");
+  const [toInput,setToInput] = useState("Type a prompt or code in the left and click submit to see your prompt translated to the code selected :)");
   const [toOpen,setToOpen] = useState(false)
 
   return (

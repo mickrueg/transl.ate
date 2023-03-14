@@ -1,0 +1,23 @@
+.ExplainThis-shape{
+    width: auto;
+    padding: 0 15px;
+    height: 40px;
+    background-color: #3B3B3B;
+    border-radius: 20px;
+    display: grid;
+    box-shadow: 0 0 5px -2px black;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.ExplainThis-shape:active{
+    scale: 0.95;
+}
+
+.ExplainThis-text{
+    margin: auto;
+    color: white;
+    font-weight: 600;
+}
+
