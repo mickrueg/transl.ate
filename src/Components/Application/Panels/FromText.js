@@ -38,7 +38,7 @@ const FromText = () => {
                 response.text()
                 console.log(body)
             })
-            .then(result => console.log(result))
+            // .then(result => console.log(result))
             .catch(error => console.log('error', error));
         }
     },[toInput])
@@ -71,7 +71,6 @@ const FromText = () => {
         .then(response => response.json())
         .then(result => {
             const translatedCode = result["choices"][0]["text"];  
-            console.log(translatedCode.trim());
             setToInput(translatedCode.trim());
         })
         .catch(error => console.log('error', error));
@@ -86,7 +85,6 @@ const FromText = () => {
             }}></textarea>
             <input type="submit" id="fromTextSubmit" name="fromTextSubmit" className='fromTextSubmit' value="submit" onClick={()=>{
                 setToInput("Loading...");
-                console.log(fromInput);
                 translate(fromLanguage,fromInput,toLanguage);
             }}></input>
         </>
