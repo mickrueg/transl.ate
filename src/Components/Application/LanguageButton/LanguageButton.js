@@ -16,8 +16,8 @@ const LanguageButton = ({language, options=[],from,open=false}) => {
 
     const listItems = options.map((e,index)=>{
         return <li className='DropDown-item' key={index} onClick={()=>{
-            (from?setFromLanguage(e):setToLanguage(e))
-            (from?setFromOpen(false):setToOpen(false))
+            (from?setFromLanguage(e):setToLanguage(e));
+            (from?setFromOpen(false):setToOpen(false));
         }}>{e}</li>
     })
 

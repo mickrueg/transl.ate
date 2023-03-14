@@ -5,7 +5,7 @@ const ExplainThis = () => {
     return (
         <div className='ExplainThis-shape'>
             <div className='ExplainThis-text'>
-                explain this
+                explain this code
             </div>
         </div>
     );

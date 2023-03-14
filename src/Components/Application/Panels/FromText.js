@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AppContext } from '../../../AppContext';
 import './FromText.css';
 
@@ -8,10 +8,41 @@ const FromText = () => {
         fromLanguage,
         fromInput,setFromInput,
         toLanguage,
-        setToInput,
+        toInput, setToInput,
         setFromOpen,
         setToOpen
     } = useContext(AppContext);
+
+    useEffect(()=>{
+        if(toInput!=="Loading..." && toInput!=="Type a prompt or code in the left and click submit to see your prompt translated to the code selected :)"){
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            
+            var body = {
+                "userFromLanguage": fromLanguage,
+                "userInput": fromInput,
+                "userToLanguage": toLanguage,
+                "aiResponse": toInput,
+                "timestamp": new Date()
+            };
+            
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: JSON.stringify(body),
+            redirect: 'follow'
+            };
+            
+            fetch("https://transl-ate.onrender.com/fromInputs", requestOptions)
+            .then(response => {
+                response.text()
+                console.log(body)
+            })
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+        }
+    },[toInput])
+
 
     const translate = (fromLanguageSelected, fromInputSelected, toLanguageSelected) =>{
         var myHeaders = new Headers();
@@ -56,7 +87,7 @@ const FromText = () => {
             <input type="submit" id="fromTextSubmit" name="fromTextSubmit" className='fromTextSubmit' value="submit" onClick={()=>{
                 setToInput("Loading...");
                 console.log(fromInput);
-                translate(fromLanguage,fromInput,toLanguage)
+                translate(fromLanguage,fromInput,toLanguage);
             }}></input>
         </>
     );
