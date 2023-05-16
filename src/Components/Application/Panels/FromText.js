@@ -50,7 +50,7 @@ const FromText = () => {
         myHeaders.append("Content-Type", "application/json");
 
         var raw = JSON.stringify({
-        "model": "code-davinci-002",
+        "model": "text-davinci-003",
         "prompt": `##### Translate this function  from JavaScript into Python\n### ${fromLanguageSelected}\n    \n    ${fromInputSelected}        \n### ${toLanguageSelected}`,
         "temperature": 0,
         "max_tokens": 54,
